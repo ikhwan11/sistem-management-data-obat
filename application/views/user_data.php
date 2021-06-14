@@ -27,7 +27,7 @@
                                         <td><?= $u['jabatan']; ?></td>
                                         <td>
                                             <a href="<?= base_url('user/update_user/') . $u['id_user']; ?>" class="btn btn-dark btn-sm btn-fill mr-2">Edit</a>
-                                            <a href="#" class="btn btn-danger btn-sm btn-fill">Hapus</a>
+                                            <a onclick="confirm('apakah ingin menghapus user?')" href="<?= base_url('user/hapus_user/') . $u['id_user']; ?>" class="btn btn-danger btn-sm btn-fill">Hapus</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
