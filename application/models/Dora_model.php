@@ -27,16 +27,6 @@ class Dora_model extends CI_Model
         $this->db->delete($table);
     }
 
-    public function ambil_id_user($id)
-    {
-        $hasil = $this->db->where('id_user', $id)->get('tb_user');
-        if ($hasil->num_rows() > 0) {
-            return $hasil->result_array();
-        } else {
-            return false;
-        }
-    }
-
     public function cek_login()
     {
         $username = set_value('username');
@@ -64,5 +54,34 @@ class Dora_model extends CI_Model
     public function hitungDataUser()
     {
         return $this->db->get('tb_user')->num_rows();
+    }
+
+    public function ambil_id_user($id)
+    {
+        $hasil = $this->db->where('id_user', $id)->get('tb_user');
+        if ($hasil->num_rows() > 0) {
+            return $hasil->result_array();
+        } else {
+            return false;
+        }
+    }
+
+    // obat
+    public function getObat($limit, $start, $keyword = null)
+    {
+        if ($keyword) {
+            $this->db->like('merk_obat', $keyword);
+        }
+        return $this->db->get('tb_obat', $limit, $start)->result_array();
+    }
+
+    public function ambil_id_obat($id)
+    {
+        $hasil = $this->db->where('id_obat', $id)->get('tb_obat');
+        if ($hasil->num_rows() > 0) {
+            return $hasil->result_array();
+        } else {
+            return false;
+        }
     }
 }

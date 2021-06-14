@@ -64,19 +64,9 @@
                         echo "active";
                     } ?>
                     ">
-                        <a class="nav-link" href="<?= base_url('obat_tambah/'); ?>">
+                        <a class="nav-link" href="<?= base_url('obat_tambah/tambah_obat'); ?>">
                             <i class="nc-icon nc-puzzle-10"></i>
                             <p>Tambah data obat</p>
-                        </a>
-                    </li>
-                    <li class="nav-item 
-                    <?php if ($this->uri->segment(1) == "obat_keluar") {
-                        echo "active";
-                    } ?>
-                    ">
-                        <a class="nav-link" href="<?= base_url('obat_keluar/'); ?>">
-                            <i class="nc-icon nc-delivery-fast"></i>
-                            <p>Input stok keluar</p>
                         </a>
                     </li>
                     <li class="nav-item active active-pro">
