@@ -6,8 +6,8 @@
                 <h3>Sistem Pengelolaan data obat <b style="color:#9368e9 ;"> Aritra Farma Batam</b></h3>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#pablo">
-                            <span class="no-icon">{nama admin} || Log out</span>
+                        <a class="nav-link" onclick="confirm('Apakah anda ingin logout?')" href="<?= base_url('auth/logout'); ?>">
+                            <span class="no-icon"><?= $this->session->userdata('nama_depan'); ?> || Log out</span>
                         </a>
                     </li>
                 </ul>

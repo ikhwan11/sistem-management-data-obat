@@ -25,10 +25,10 @@
                 </td>
             </tr>
         <?php endif; ?>
-        <?php foreach ($obat as $o) : ?>
-            <span class="text-warning">Result : <?= $total_rows; ?></span>
-            <div class="row">
-                <div class="col">
+        <span class="text-warning">Result : <?= $total_rows; ?></span>
+        <div class="row">
+            <?php foreach ($obat as $o) : ?>
+                <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
                         <img src="<?= base_url('assets'); ?> /foto_obat/<?= $o['foto']; ?>" class="rounded float-left" alt="...">
                         <div class="card-body">
@@ -58,8 +58,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </div>
         <div class="col">
             <?= $this->pagination->create_links();; ?>
         </div>
