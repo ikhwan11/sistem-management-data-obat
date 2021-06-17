@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="d-print-none footer">
     <div class="container-fluid">
         <nav>
             <p class="copyright text-center">

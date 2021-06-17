@@ -70,7 +70,7 @@
                         </a>
                     </li>
                     <li class="nav-item active active-pro">
-                        <a class="nav-link active" href="#">
+                        <a class="nav-link active" href="<?= base_url('laporan/'); ?>">
                             <i class="nc-icon nc-single-copy-04"></i>
                             <p>Buat laporan</p>
                         </a>
